@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { createReadStream } from "fs";
+import { createReadStream, existsSync } from "fs";
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import type { YouTubeClient } from "../client.js";
 import { wrapToolHandler } from "../utils/error-handler.js";
@@ -22,6 +22,9 @@ const register = (server: McpServer, client: YouTubeClient) => {
     async (args) =>
       wrapToolHandler(async () => {
         const { youtube } = client;
+        if (!existsSync(args.file_path)) {
+          throw new Error(`File not found: ${args.file_path}`);
+        }
         const stream = createReadStream(args.file_path);
 
         const response = await youtube.videos.insert({
