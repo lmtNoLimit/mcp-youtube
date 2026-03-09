@@ -1,7 +1,7 @@
-# @builderhub/mcp-youtube
+# @m8lab/mcp-youtube
 
 [![CI](https://github.com/lmtNoLimit/mcp-youtube/actions/workflows/ci.yml/badge.svg)](https://github.com/lmtNoLimit/mcp-youtube/actions/workflows/ci.yml)
-[![npm version](https://img.shields.io/npm/v/@builderhub/mcp-youtube)](https://www.npmjs.com/package/@builderhub/mcp-youtube)
+[![npm version](https://img.shields.io/npm/v/@m8lab/mcp-youtube)](https://www.npmjs.com/package/@m8lab/mcp-youtube)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
 MCP server for YouTube — upload videos, manage playlists, and moderate comments via Claude Code/Desktop.
@@ -9,13 +9,13 @@ MCP server for YouTube — upload videos, manage playlists, and moderate comment
 ## Install
 
 ```bash
-npx @builderhub/mcp-youtube
+npx @m8lab/mcp-youtube
 ```
 
 Or install globally:
 
 ```bash
-npm install -g @builderhub/mcp-youtube
+npm install -g @m8lab/mcp-youtube
 ```
 
 ## OAuth Setup Guide
@@ -71,7 +71,7 @@ Add to your Claude Code MCP config (`~/.claude/mcp.json` or project `.mcp.json`)
   "mcpServers": {
     "youtube": {
       "command": "npx",
-      "args": ["-y", "@builderhub/mcp-youtube"],
+      "args": ["-y", "@m8lab/mcp-youtube"],
       "env": {
         "YOUTUBE_OAUTH_CLIENT_ID": "your-client-id",
         "YOUTUBE_OAUTH_CLIENT_SECRET": "your-client-secret",
@@ -92,7 +92,7 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
   "mcpServers": {
     "youtube": {
       "command": "npx",
-      "args": ["-y", "@builderhub/mcp-youtube"],
+      "args": ["-y", "@m8lab/mcp-youtube"],
       "env": {
         "YOUTUBE_OAUTH_CLIENT_ID": "your-client-id",
         "YOUTUBE_OAUTH_CLIENT_SECRET": "your-client-secret",
